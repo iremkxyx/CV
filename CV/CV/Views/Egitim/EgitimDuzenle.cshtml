@@ -1,0 +1,29 @@
+﻿@model CV.Models.Entity.Egitimlerim
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitim Bilgisi Düzenleme</h4>
+<br />
+<form method="post">
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(X => X.Baslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { style = "color:red" })
+    <br />
+    @Html.Label("Alt Başlık 1")
+    @Html.TextBoxFor(X => X.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık 2")
+    @Html.TextBoxFor(X => X.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(X => X.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Genel Not Ortalaması(GNO)")
+    @Html.TextBoxFor(X => X.GNO, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form> 
